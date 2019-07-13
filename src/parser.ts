@@ -1,3 +1,3 @@
 export function findUrls(html: string): string[] {
-    return []
+    return html.match(/\bhttps?:\/\/\S+/gi);
 }
