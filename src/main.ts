@@ -1,5 +1,5 @@
-import {fetchUrl} from "./fetcher.ts";
-import {findUrls} from "./parser.ts"
-import Scraper from "./core.ts"
+import {fetchUrls} from "./core.ts"
 
-fetchUrl('https://google.com').then((body) => console.log(body));
+fetchUrls('https://schema.org/').then(urls =>
+    console.log(urls)
+)

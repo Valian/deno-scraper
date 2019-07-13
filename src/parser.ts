@@ -1,3 +1,4 @@
 export function findUrls(html: string): string[] {
-    return html.match(/\bhttps?:\/\/\S+/gi);
+    const urls = html.match(/\bhttps?:\/\/[^">< ]+/gi) || []
+    return urls.filter(u => u.length < 30);
 }
